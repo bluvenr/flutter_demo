@@ -3,6 +3,7 @@ import 'package:my_flutter_app/animated_list.dart';
 import 'package:my_flutter_app/app_bar_bottom.dart';
 import 'package:my_flutter_app/basic_appbar.dart';
 import 'package:my_flutter_app/expansion_tiles.dart';
+import 'package:my_flutter_app/network_image.dart';
 import 'package:my_flutter_app/random_words.dart';
 import 'package:my_flutter_app/tabbed_appbar.dart';
 
@@ -23,6 +24,7 @@ final List<MyRoute> myRoutesList = <MyRoute>[
   MyRoute(name: "基础AppBar", path: "/basic_appbar", widgetBuilder: (content) => BasicAppBarPage(title: "基础AppBar")),
   MyRoute(name: "二级或多级列表", path: "/expansion_tiles", widgetBuilder: (content) => ExpansionTilesPage(title: "二级或多级列表")),
   MyRoute(name: "选项卡式的AppBar", path: "/tabbed_appbar", widgetBuilder: (content) => TabbedAppBarPage(title: "选项卡式的AppBar")),
+  MyRoute(name: "显示网络图片", path: "/network_image", widgetBuilder: (content) => NetworkImagePage(title: "显示网络图片")),
 ];
 
 class MyApp extends StatelessWidget {
