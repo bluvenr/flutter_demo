@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_app/animated_list.dart';
 import 'package:my_flutter_app/app_bar_bottom.dart';
 import 'package:my_flutter_app/basic_appbar.dart';
+import 'package:my_flutter_app/dismissible.dart';
 import 'package:my_flutter_app/expansion_tiles.dart';
 import 'package:my_flutter_app/grid_list.dart';
+import 'package:my_flutter_app/handling_taps.dart';
 import 'package:my_flutter_app/mixed_list.dart';
 import 'package:my_flutter_app/network_image.dart';
 import 'package:my_flutter_app/random_words.dart';
+import 'package:my_flutter_app/ripples.dart';
 import 'package:my_flutter_app/tabbed_appbar.dart';
 
 void main() => runApp(new MyApp());
@@ -29,6 +32,9 @@ final List<MyRoute> myRoutesList = <MyRoute>[
   MyRoute(name: "显示网络图片", path: "/network_image", widgetBuilder: (content) => NetworkImagePage(title: "显示网络图片")),
   MyRoute(name: "多类型子项列表", path: "/mixed_list", widgetBuilder: (content) => MixedListPage(title: "多类型子项列表")),
   MyRoute(name: "网格列表", path: "/grid_list", widgetBuilder: (content) => GridListPage(title: "网格列表")),
+  MyRoute(name: "处理Taps", path: "/handling_taps", widgetBuilder: (content) => HandlingTapsPage(title: "处理Taps")),
+  MyRoute(name: "添加Material触摸水波效果", path: "/ripples", widgetBuilder: (content) => RipplesPage(title: "添加Material触摸水波效果")),
+  MyRoute(name: "滑动关闭列表项", path: "/dismissible", widgetBuilder: (content) => DismissiblePage(title: "滑动关闭列表项")),
 ];
 
 class MyApp extends StatelessWidget {
@@ -43,7 +49,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: "Flutter Dome App",
-      theme: new ThemeData(primaryColor: Colors.white),
+      theme: new ThemeData(primaryColor: Colors.white).copyWith(platform: TargetPlatform.iOS),
       home: HomePage(),
       routes: _myRoutes,
 //      showPerformanceOverlay: true,
