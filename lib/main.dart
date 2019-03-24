@@ -4,6 +4,7 @@ import 'package:my_flutter_app/animated_list.dart';
 import 'package:my_flutter_app/app_bar_bottom.dart';
 import 'package:my_flutter_app/basic_appbar.dart';
 import 'package:my_flutter_app/dismissible.dart';
+import 'package:my_flutter_app/drop_down_refresh_load.dart';
 import 'package:my_flutter_app/expansion_tiles.dart';
 import 'package:my_flutter_app/fetch_data.dart';
 import 'package:my_flutter_app/grid_list.dart';
@@ -45,6 +46,7 @@ final List<MyRoute> myRoutesList = <MyRoute>[
   MyRoute(name: "从新页面返回数据给上一个页面", path: "/returning_data", widgetBuilder: (content) => ReturningDataPage(title: "从新页面返回数据给上一个页面")),
   MyRoute(name: "从互联网上获取数据", path: "/fetch_data", widgetBuilder: (content) => FetchDataPage(title: "从互联网上获取数据")),
   MyRoute(name: "使用WebSockets", path: "/web_sockets", widgetBuilder: (content) => WebSocketsPage(title: "使用WebSockets")),
+  MyRoute(name: "下拉刷新加载", path: "/drop_down_refresh_load", widgetBuilder: (content) => DropDownRefreshLoadPage(title: "下拉刷新加载")),
 ];
 
 class MyApp extends StatelessWidget {
