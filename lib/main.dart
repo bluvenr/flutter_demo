@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/WebSocketsPage.dart';
 import 'package:my_flutter_app/animated_list.dart';
 import 'package:my_flutter_app/app_bar_bottom.dart';
 import 'package:my_flutter_app/basic_appbar.dart';
@@ -43,6 +44,7 @@ final List<MyRoute> myRoutesList = <MyRoute>[
   MyRoute(name: "给新页面传值", path: "/passing_data", widgetBuilder: (content) => PassingDataPage(title: "给新页面传值")),
   MyRoute(name: "从新页面返回数据给上一个页面", path: "/returning_data", widgetBuilder: (content) => ReturningDataPage(title: "从新页面返回数据给上一个页面")),
   MyRoute(name: "从互联网上获取数据", path: "/fetch_data", widgetBuilder: (content) => FetchDataPage(title: "从互联网上获取数据")),
+  MyRoute(name: "使用WebSockets", path: "/web_sockets", widgetBuilder: (content) => WebSocketsPage(title: "使用WebSockets")),
 ];
 
 class MyApp extends StatelessWidget {
